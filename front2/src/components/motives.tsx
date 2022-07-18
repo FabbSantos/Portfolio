@@ -29,7 +29,7 @@ const Motives: React.FC = () => {
                         <div className="flex flex-col justify-start text-center items-center h-[230px] md:w-[230px]">
                             <div className="h-[100px] w-[100px] inline-block text-center relative flex-shrink-0">
                                 <div className="hexagon h-full inline-block w-[calc(100%*0.57735)] bg-hexagon">
-                                    <i className="text-white absolute right-[26.5%] top-[25%] z-[1]">
+                                    <i className="text-white absolute right-[26.5%] top-[21%] z-[1]">
                                         <FontAwesomeIcon icon={faMobileAlt} size="3x" />
                                     </i>
                                 </div>
@@ -46,7 +46,7 @@ const Motives: React.FC = () => {
                         <div className="flex flex-col justify-start text-center items-center h-[230px] md:w-[230px] ">
                             <div className="h-[100px] w-[100px] inline-block text-center relative flex-shrink-0">
                                 <div className="hexagon h-full inline-block w-[calc(100%*0.57735)] bg-hexagon  px-4">
-                                    <i className="text-white absolute right-[14%] top-[25%] z-[1]" >
+                                    <i className="text-white absolute right-[13%] top-[21%] z-[1]" >
                                         <FontAwesomeIcon icon={faArrowsToEye} size="3x" />
                                     </i>
                                 </div>
