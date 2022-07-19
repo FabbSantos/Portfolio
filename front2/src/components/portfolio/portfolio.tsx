@@ -34,14 +34,15 @@ const Portfolio: React.FC = () => {
                 <div className="col_third">
                     <div onMouseOver={mouseOver} onMouseOut={mouseOut} className="hover panel">
                         <div className="front">
-                            <div className="box1 bg-port-1 bg-cover">
+                            <div className="box1 bg-port-1 bg-cover shadow-lg">
                                 
                             </div>
                         </div>
                         <div className="back">
-                            <div className="box2">
-                                <p>Bar with friends</p>
-                                <button className="py-2 px-5 rounded-sm border-slate-900 border-2 hover:bg-nameColor text-black transition-all transitio"> See more</button>
+                            <div className="box2 bg-port-blur bg-cover shadow-lg" >
+                                <h3 className="font-bold text-2xl text-gray-700">Portfolio</h3>
+                                <p className="text-black">That's the website you're seeing!</p>
+                                <button className="py-2 px-5 rounded-sm border-slate-900 border-2 hover:border-nameColor hover:bg-nameColor hover:text-white text-black"> See more</button>
                             </div>
                         </div>
                     </div>
@@ -50,13 +51,14 @@ const Portfolio: React.FC = () => {
                 <div className="col_third end">
                     <div onMouseOver={mouseOver} onMouseOut={mouseOut} className="hover panel">
                         <div className="front">
-                            <div className="box1 bg-port-bar bg-cover">
+                            <div className="box1 bg-port-bar bg-cover ">
                                 {/* <img src={bar} alt="barzim" /> */}
                             </div>
                         </div>
                         <div className="back">
-                            <div className="box2">
-                                <p>Bar with friends</p>
+                            <div className="box2 bg-port-bar bg-cover blur-sm">
+                                <h3>Bar with friends</h3>
+                                <p></p>
                                 <button className="py-2 px-5 rounded-sm border-slate-900 border-2 hover:bg-nameColor text-black transition-all transitio"> See more</button>
                             </div>
                         </div>

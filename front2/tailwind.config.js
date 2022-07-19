@@ -15,7 +15,8 @@ module.exports = {
         'masthead': "url('src/assets/bg-fotis.jpg')",
         'all-black': "url('src/assets/all-black.jpg')",
         'port-bar': "url('src/assets/bar1.jpg')",
-        'port-1': "url('src/assets/1.jpg')",
+        'port-1': "url('src/assets/portfolio.png')",
+        'port-blur': "url('src/assets/port-1-blur.png')",
       },
       keyframes: {
         appear:{

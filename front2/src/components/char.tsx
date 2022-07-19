@@ -23,7 +23,7 @@ const Char: React.FC = () => {
                 </div>
                 
             </div>
-            <p className="pb-10 text-sm md:text-lg text-gray-700 text-center"> I'm a Front-End Developer for <span className="text-nameColor">Hagens</span> in Rio, Brazil. I'm passionate about CSS, animations, UI effects and... Pokémon. </p>
+            <p className="pb-10 text-sm md:text-lg text-gray-700 text-center"> I'm a Front-End Developer for <span className="text-nameColor">????</span> in Rio, Brazil. I'm passionate about CSS, animations, UI effects and... Pokémon. </p>
         </div>
     )
 
