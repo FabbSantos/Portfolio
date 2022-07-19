@@ -34,7 +34,7 @@ const Portfolio: React.FC = () => {
                 <div className="col_third">
                     <div onMouseOver={mouseOver} onMouseOut={mouseOut} className="hover panel">
                         <div className="front">
-                            <div className="box1 bg-port-1 bg-cover shadow-lg">
+                            <div className="box1 bg-port-1 bg-cover drop-shadow-xl">
                                 
                             </div>
                         </div>
@@ -51,12 +51,12 @@ const Portfolio: React.FC = () => {
                 <div className="col_third end">
                     <div onMouseOver={mouseOver} onMouseOut={mouseOut} className="hover panel">
                         <div className="front">
-                            <div className="box1 bg-port-bar bg-cover ">
+                            <div className="box1 bg-port-bar bg-cover drop-shadow-xl">
                                 {/* <img src={bar} alt="barzim" /> */}
                             </div>
                         </div>
                         <div className="back">
-                            <div className="box2 bg-port-bar bg-cover blur-sm">
+                            <div className="box2 bg-port-bar bg-cover drop-shadow-xl">
                                 <h3>Bar with friends</h3>
                                 <p></p>
                                 <button className="py-2 px-5 rounded-sm border-slate-900 border-2 hover:bg-nameColor text-black transition-all transitio"> See more</button>
