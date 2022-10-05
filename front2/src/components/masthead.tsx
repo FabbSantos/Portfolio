@@ -12,7 +12,7 @@ import { faArrowAltCircleLeft } from "@fortawesome/free-regular-svg-icons";
 // }
 
 const Masthead: React.FC = () => {
-  
+
   const variants = {
     open: { width: "90vw", opacity: 1, height: "18vh", visibility: "visible", color: "white" },
     closed: { width: 0 }
@@ -30,14 +30,14 @@ const Masthead: React.FC = () => {
         <div className="px-6 md:px-0  md:max-w-[1400px] flex flex-col justify-center items-center min-h-[94vh] mt-auto mx-auto">
 
 
-          <motion.button onClick={() => { scroll() }} className="absolute top-[20%] right-[15%] px-6  py-2 border-2 border-black "
+          <motion.button onClick={() => { scroll() }} className="absolute top-[18%] right-[15%] px-6  py-2 border-2 border-black  pointer-events-none"
 
-            initial={{ x: '40vw',  opacity: 0 }}
+            initial={{ x: '40vw', opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ type: 'spring', duration: 1, bounce: 0.2 }}
           >
             Work <FontAwesomeIcon icon={faArrowCircleRight} size="xs" /> Results
-          </motion.button> 
+          </motion.button>
 
 
           <motion.h1
@@ -46,11 +46,7 @@ const Masthead: React.FC = () => {
             animate={{ x: "-5vw", opacity: 1 }}
             transition={{ type: "spring", duration: 1, bounce: 0.2 }}
           >
-            <span className="f font-bold text-[6rem]  font-serif"><Typewriter
-              onInit={(typewritter) => {
-                typewritter.typeString("Fabrício").start()
-              }}
-              /></span>
+            <span className="f font-bold text-[8rem]  font-serif">Fabrício</span>
           </motion.h1>
 
           <div className="menu-wrapper">
@@ -151,8 +147,25 @@ const Masthead: React.FC = () => {
 
 
             <div className="bottom-row absolute bottom-[15%]  ">
+
+              <p className="uppercase text-xs max-w-[200px] min-w-[200px] text-black"> 
+                <Typewriter
+                  onInit={(typewritter) => {
+                    typewritter.changeDelay(10)
+                    typewritter.typeString("Fabrício (he/him) is a web  developer and designer from rio de janeiro, brazil.  ")
+                    .start();
+                  }}
+                />          
+                </p>
               
-              <p className="uppercase text-xs max-w-[200px] text-black"> Fabrício (he/him) is a web developer and designer from rio de janeiro, brazil. </p>
+              {/* <Typewriter options={{ loop: true }}
+                onInit={(typewritter2) => {
+                  typewritter2.changeDelay(12)
+                  typewritter2.typeString("developer")
+                    .deleteChars(9)
+                  typewritter2.typeString("designer")
+                    .start();
+                }}/> */}
 
               <motion.h2
                 className="max-w-3xl md:text-5xl   "
@@ -161,7 +174,7 @@ const Masthead: React.FC = () => {
                 transition={{ type: "spring", duration: 1, bounce: 0.2 }}
               >
 
-                <span className="font-bold text-[6rem]  font-serif">Bahiense</span>
+                <span className="font-bold text-[8rem]  font-serif">Bahiense</span>
               </motion.h2>
 
 
@@ -179,4 +192,3 @@ export default Masthead;
 // home: bg-all-black bg-cover bg-no-repeat
 
 
- 
