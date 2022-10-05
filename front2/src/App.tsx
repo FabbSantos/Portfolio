@@ -23,7 +23,7 @@ function App() {
       {
         loading 
           ? <Loader /> 
-          : <> <Masthead/> <Logo/> <About/> </>
+          : <> <Masthead/> <About/> </>
       }     
     </>
 

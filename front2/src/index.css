@@ -2,12 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Roobert";
+  src: url("src/assets/fonts/RoobertTRIAL-Regular.otf");
+}
+
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Roobert", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,4 +18,76 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.logo{
+  filter:  brightness(0) saturate(100%);
+}
+.menu {
+  display: flex;
+  gap: 7em;
+  overflow: visible;
+}
+.item_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 0.8em;
+}
+.bg {
+  width: 96.2vw;
+  min-height: 18vh;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 1.4%;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; 
+  background: #000;
+}
+/*.menu_item:hover > .bg{
+  visibility:visible;
+  background: #000;
+  color: white;
+}
+*/
+
+.menu_item .num{
+  font-size: .6em;
+  opacity: .7;
+}
+.menu_item .name {
+  font-size: .8em;
+}
+
+.bg .num{
+  margin-left: 5%;
+  font-size: 1em;
+}
+.bg .name{
+  margin-left: 11%;
+  font-size: 3em;
+}
+
+.bottom-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9em;
+}
+
+@keyframes opacity {
+  0%{ opacity: 0; width: 0; align-items: left; }
+  10%{ opacity: .10; width: 10%;}
+  20%{ opacity: .20; width: 20%;}
+  30%{ opacity: .30; width: 30%;}
+  40%{ opacity: .40; width: 40%;}
+  50%{ opacity: 1; width: 90%; }
+  100%{ opacity: 1;  width: 90%; align-items: left;}
+110%{ opacity: 1;  width: 90%; align-items: center;}
+  
 }
