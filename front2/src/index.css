@@ -73,6 +73,10 @@ code {
   align-items: center;
   gap: 12em;
 }
+.bg .name {
+  cursor: pointer;
+}
+
 
 @keyframes opacity {
   0%{ opacity: 0; width: 0; align-items: left; }
