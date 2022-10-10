@@ -1,72 +1,64 @@
-import React from "react"
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-// import { faDiamond, faMars } from '@fortawesome/free-solid-svg-icons'
-import bar from '../../assets/bar1.jpg'
-import './portfolio.css'
+import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useRef, useState } from "react"
+import Typewriter from 'typewriter-effect';
 
+const Portfolio: React.FC = () => { 
 
-
-function mouseOver(e: React.MouseEvent<HTMLDivElement>) {
-    if (!e?.currentTarget)
-        return;
-
-    const card = e.currentTarget;
-    if (!card.classList.contains('flip'))
-        card.classList.add('flip')
-}
-
-function mouseOut(e: React.MouseEvent<HTMLDivElement>) {
-    if (!e?.currentTarget)
-        return;
-
-    const card = e.currentTarget;
-    if (card.classList.contains('flip'))
-        card.classList.remove('flip')
-}
-
-const Portfolio: React.FC = () => {
     return (
         <>
-            <h2 className="font-bold text-4xl my-6 text-gray-700 text-center">My most recent work</h2>
-            <div className="under w-28 h-1 bg-gray-800 mt-3 mb-10 mx-auto"></div>
+            <section
+                id="portfolio"
+                className=" relative text-black text-center text-3xl  min-h-[95vh] mb-2"
+            >
+                <div className="border-2 border-black m-5">
+                    <div className="px-6 md:px-0  md:max-w-[1400px] flex flex-col justify-center items-center min-h-[94vh] mt-auto mx-auto">
 
-            <div className="wrapper">
-                <div className="col_third">
-                    <div onMouseOver={mouseOver} onMouseOut={mouseOut} className="hover panel">
-                        <div className="front">
-                            <div className="box1 bg-port-1 bg-cover drop-shadow-xl">
-                                
-                            </div>
+                        <motion.div className="uppercase text-base max-w-[400px] min-w-[200px] text-black absolute top-[21%] right-[10%]"
+ 
+                        >
+                            <Typewriter
+                                onInit={(typewritter) => {
+                                    // typewritter.pauseFor(5000)
+                                    typewritter.changeDelay(10)
+                                    typewritter.typeString("Selected projects that I built this year. ")
+                                        .start();
+                                }}
+                            />
+                        </motion.div>
+
+
+
+                        <motion.h1
+                            className="max-w-3xl md:text-5xl mb-8  absolute left-1/3 md:left-[15%] top-[15%]"
+                            initial={{ x: "-20vw", opacity: 0 }}
+                            animate={{ x: "-5vw", opacity: 1 }}
+                            transition={{ type: "spring", duration: 1, bounce: 0.2 }}
+                        >
+                            <span className="f font-bold text-[8rem]  font-serif">Projects</span>
+                        </motion.h1>
+
+                        <div className="bottom-row absolute bottom-[15%]  ">
+
+                           
+
+                            <motion.h2
+                                className="max-w-3xl md:text-5xl   "
+                                initial={{ x: "+40vw", opacity: 0 }}
+                                animate={{ x: "40vw", opacity: 1 }}
+                                transition={{ type: "spring", duration: 1, bounce: 0.2 }}
+                                >
+
+                                <span className="font-bold text-[3rem]  italic">2022</span>
+                            </motion.h2>
+
+
                         </div>
-                        <div className="back">
-                            <div className="box2 bg-port-blur bg-cover shadow-lg" >
-                                <h3 className="font-bold text-2xl text-gray-700">Portfolio</h3>
-                                <p className="text-black">That's the website you're seeing!</p>
-                                <button className="py-2 px-5 rounded-sm border-slate-900 border-2 hover:border-nameColor hover:bg-nameColor hover:text-white text-black"> See more</button>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
-
-                <div className="col_third end">
-                    <div onMouseOver={mouseOver} onMouseOut={mouseOut} className="hover panel">
-                        <div className="front">
-                            <div className="box1 bg-port-bar bg-cover drop-shadow-xl">
-                                {/* <img src={bar} alt="barzim" /> */}
-                            </div>
-                        </div>
-                        <div className="back">
-                            <div className="box2 bg-port-bar bg-cover drop-shadow-xl">
-                                <h3>Bar with friends</h3>
-                                <p></p>
-                                <button className="py-2 px-5 rounded-sm border-slate-900 border-2 hover:bg-nameColor text-black transition-all transitio"> See more</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
         </>
-    )
+    );
 
 }
 

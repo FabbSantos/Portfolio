@@ -172,7 +172,7 @@ const Masthead: React.FC = () => {
                 <motion.h2
                   className="max-w-3xl md:text-5xl   "
                   initial={{ x: "+40vw", opacity: 0 }}
-                  animate={{ x: "5vw", opacity: 1 }}
+                  animate={{ x: "0vw", opacity: 1 }}
                   transition={{ type: "spring", duration: 1, bounce: 0.2 }}
                 >
 
