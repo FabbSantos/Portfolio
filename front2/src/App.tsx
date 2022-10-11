@@ -4,8 +4,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Masthead from './components/masthead'
 import Loader from './components/loader'
-import Logo from './components/logo'
-import About from './components/about'
+import About from './components/about';
 import Work from './components/work';
 
 
@@ -29,8 +28,6 @@ function App() {
           : <BrowserRouter>
             <Routes>
               <Route path="/" element={<Masthead />}/>
-                {/* <Route index element={<Masthead />} /> */}
-                {/* <Route path="contact" element={<NoPage />} /> */}
                 <Route path="about" element={<About />} />
                 <Route path="work" element={<Work />} />
             </Routes>

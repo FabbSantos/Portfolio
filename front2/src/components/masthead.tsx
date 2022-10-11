@@ -25,9 +25,9 @@ const Masthead: React.FC = () => {
     <>
       <section
         id="home"
-        className=" text-black text-center text-3xl  min-h-[95vh] mb-2"
+        className=" text-black text-center text-3xl  min-h-[95vh]"
       >
-        <div className="border-2 border-black m-5">
+        <div className="border-2 border-black">
           <Logo />
           <div className="px-6 md:px-0  md:max-w-[1400px] flex flex-col justify-center items-center min-h-[94vh] mt-auto mx-auto">
 
@@ -96,7 +96,7 @@ const Masthead: React.FC = () => {
                     variants={variants}
                   >
                     <span className="num z-20">02</span>
-                    <span className="name z-20">about</span>
+                    <span className="name z-20"><Link to="/about">about</Link></span>
                   </motion.div>
                 </li>
 
@@ -160,23 +160,14 @@ const Masthead: React.FC = () => {
                   />
                 </div>
 
-                {/* <Typewriter options={{ loop: true }}
-                onInit={(typewritter2) => {
-                  typewritter2.changeDelay(12)
-                  typewritter2.typeString("developer")
-                    .deleteChars(9)
-                  typewritter2.typeString("designer")
-                    .start();
-                }}/> */}
-
                 <motion.h2
                   className="max-w-3xl md:text-5xl   "
-                  initial={{ x: "+40vw", opacity: 0 }}
-                  animate={{ x: "0vw", opacity: 1 }}
+                  initial={{ x: "40vw", opacity: 0 }}
+                  animate={{ x: "-5vw", opacity: 1 }}
                   transition={{ type: "spring", duration: 1, bounce: 0.2 }}
                 >
 
-                  <span className="bahi font-bold text-[8rem]  font-serif">Bahiense</span>
+                  <span className="font-bold text-[8rem]  font-serif">Bahiense</span>
                 </motion.h2>
 
 

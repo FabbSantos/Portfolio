@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Logo from "./logo";
 import Typewriter from 'typewriter-effect';
 import Portfolio from "./portfolio/portfolio";
+import { Link } from "react-router-dom";
 
 function scroll() {
   const about = document.getElementById("portfolio") as HTMLElement;
@@ -95,7 +96,7 @@ const Work: React.FC = () => {
                     variants={variants}
                   >
                     <span className="num z-20">02</span>
-                    <span className="name z-20">about</span>
+                    <span className="name z-20"><Link to="/about">about</Link></span>
                   </motion.div>
                 </li>
 
