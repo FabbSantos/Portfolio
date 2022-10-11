@@ -1,7 +1,8 @@
 body {
-	background-color: #ecf0f1; 
+	font-family: "Roobert", serif;
+
 	font-size: 20px; 
-	color: #666666; 
+	color: black; 
 	text-align: center;	
 }
 p { color: #ffffff;  }
@@ -114,7 +115,6 @@ p { color: #ffffff;  }
 	height: 300px;
 	margin: 0 auto;
 	padding: 20px;
-	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
@@ -127,7 +127,6 @@ p { color: #ffffff;  }
 	height: 300px;
 	margin: 0 auto;
 	padding: 20px;
-	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 }
