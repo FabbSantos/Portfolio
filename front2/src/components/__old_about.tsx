@@ -8,7 +8,7 @@ import Skills from "./skills";
 const About: React.FC = () => {
     return (
         <section id="about" className="pb-20 px-10 md:max-w-[1400px] my-0 mx-auto">
-            <Motives />
+            {/* <Motives /> */}
             <div className="flex flex-col md:flex-row justify-evenly md:pb-10">
                 <Char />
                 <div className="md:h-[500px] md:w-[500px] md:max-h-[500px] md:max-w-[500px]">

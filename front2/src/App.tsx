@@ -6,6 +6,7 @@ import Masthead from './components/masthead'
 import Loader from './components/loader'
 import About from './components/about';
 import Work from './components/work';
+import About__Me from './components/about_me';
 
 
 
@@ -30,6 +31,7 @@ function App() {
               <Route path="/" element={<Masthead />}/>
                 <Route path="about" element={<About />} />
                 <Route path="work" element={<Work />} />
+                <Route path="about_me" element={<About__Me />} />
             </Routes>
           </BrowserRouter>
       }

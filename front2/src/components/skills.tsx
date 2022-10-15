@@ -19,18 +19,20 @@ ChartJS.register(
     Tooltip,
     Legend
   );
+
   
   export const data = {
-    labels: ['SUMMARY','HTML', 'CSS', 'JAVASCRIPT', 'REACT'],
+    labels: ['SUMMARY', 'HTML', 'QWIK' , 'JAVASCRIPT', 'REACT', 'DENO', 'CSS' ],
     datasets: [
       {
         label: 'SKILLS',
-        data: [0, 10, 10, 8, 6],
+        data: [0, 10, 6, 8, 8, 6, 10],
         backgroundColor: 'rgba(231, 29, 115, 0.5)',
         borderColor: 'rgba(129, 45, 127, 1)',
         borderWidth: 1,
       },
     ],
+  
   };
   
 

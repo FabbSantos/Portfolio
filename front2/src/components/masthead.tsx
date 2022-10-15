@@ -27,7 +27,7 @@ const Masthead: React.FC = () => {
         id="home"
         className=" text-black text-center text-3xl  min-h-[95vh]"
       >
-        <div className="border-2 border-black">
+        <div className="border-2 border-black m-5">
           <Logo />
           <div className="px-6 md:px-0  md:max-w-[1400px] flex flex-col justify-center items-center min-h-[94vh] mt-auto mx-auto">
 
