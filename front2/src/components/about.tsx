@@ -1,35 +1,43 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Logo from "./logo";
 import Typewriter from 'typewriter-effect';
 import About__Me from "./about_me";
 import { Link } from "react-router-dom";
 
 function scroll() {
-    const about = document.getElementById("desc") as HTMLElement;
+    const about: HTMLElement = document.getElementById("desc")!;
     about.scrollIntoView({ block: "start", behavior: "smooth" });
 }
 
 const About: React.FC = () => {
 
-    const variants = {
+    const variants: Variants = {
         open: { width: "90vw", opacity: 1, height: "18vh", visibility: "visible", color: "white" },
         closed: { width: 0 }
     };
 
     const [current, setCurrent] = useState<number | null>(null);
+    const [change, setChange] = useState(true);
 
-    return (
-        <>
+    return (  
             <section
                 id="work"
                 className=" text-black text-center text-3xl  min-h-[95vh] mb-2"
             >
                 <div className="border-2 border-black m-5">
                     <Logo />
-                    <div className="px-6 md:px-0  md:max-w-[1400px] flex flex-col justify-center items-center min-h-[94vh] mt-auto mx-auto">
+                    <div className="px-6 md:px-0  md:max-w-[1400px] flex flex-row justify-center items-center  mt-auto mx-auto">
 
-                        <motion.div className="uppercase text-base max-w-[400px] min-w-[200px] text-black absolute top-[21%] right-[10%]">
+                        <motion.h1
+                            className="max-w-3xl md:text-5xl mb-8  "
+                            initial={{ x: "-20vw", opacity: 0 }}
+                            animate={{ x: "-5vw", opacity: 1 }}
+                            transition={{ type: "spring", duration: 1, bounce: 0.2 }}
+                        >
+                            <span className="f font-bold text-[8rem]  font-serif">About</span>
+                        </motion.h1>
+                        <motion.div className="uppercase text-base max-w-[400px] min-w-[200px] text-black  top-[21%] right-[10%]">
                             <Typewriter
                                 onInit={(typewritter) => {
                                     typewritter.changeDelay(10)
@@ -38,20 +46,12 @@ const About: React.FC = () => {
                                 }}
                             />
                         </motion.div>
+                    </div>
 
 
 
-                        <motion.h1
-                            className="max-w-3xl md:text-5xl mb-8  absolute left-1/3 md:left-[15%] top-[15%]"
-                            initial={{ x: "-20vw", opacity: 0 }}
-                            animate={{ x: "-5vw", opacity: 1 }}
-                            transition={{ type: "spring", duration: 1, bounce: 0.2 }}
-                        >
-                            <span className="f font-bold text-[8rem]  font-serif">About</span>
-                        </motion.h1>
-
-                        <div className="menu-wrapper">
-                            <motion.ul className="menu inline"
+                        <div className="menu-wrapper min-h-[50vh]">
+                            <motion.ul className="menu"
                             >
                                 <li
                                     className="menu_item"
@@ -148,7 +148,9 @@ const About: React.FC = () => {
                             </motion.ul>
 
 
-                            <div className="bottom-row absolute bottom-[13%]  left-[15.5%]">
+
+                        </div>
+                            <div className="bottom-row  ">
 
                                 <div className="uppercase text-base max-w-[250px] min-w-[200px] text-black">
                                     <Typewriter
@@ -161,7 +163,9 @@ const About: React.FC = () => {
                                 </div>
 
 
-                                <div className='icon-scroll' onClick={scroll}></div >
+                            <div>
+                                <p>Let me take you into a story</p>
+                            </div>
 
 
                                 <motion.h2
@@ -174,15 +178,11 @@ const About: React.FC = () => {
                                     <span className="font-bold text-[8rem]  font-serif">Me</span>
                                 </motion.h2>
 
-
                             </div>
-
-                        </div>
-                    </div>
+                    
                 </div>
-            </section>
-            <About__Me/>
-        </>
+            </section> 
+        
     );
 };
 
