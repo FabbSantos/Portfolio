@@ -29,6 +29,7 @@ code {
 }
 .menu {
   display: flex;
+  justify-content: center;
   gap: 10em;
   overflow: visible;
 }
@@ -56,6 +57,7 @@ code {
 
 .menu_item .num{
   font-size: .6em;
+  cursor: pointer;
   opacity: .7;
 }
 .menu_item .name {
@@ -77,6 +79,9 @@ code {
   align-items: center;
   gap: 15em;
 }
+#about .bottom-row {
+  gap: 8em;
+}
 .bg .name {
   cursor: pointer;
 }
@@ -85,6 +90,27 @@ code {
   font-size: .7em;
   letter-spacing: .1px;
 }
+.goto{
+  cursor: pointer;
+  background-image: linear-gradient(45deg, #f1c40f 50%, transparent 50%);
+  background-position:  100%;
+  background-size: 400%;
+  transition: background 300ms ease-in-out;
+}
+.goto:hover {
+    background-position: 0;
+}
+/*
+.goto:after  {
+  content: '';
+  background-color: white;
+  transform: rotate(10deg);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}*/
 
 .fa-mars {
   width: 20px;

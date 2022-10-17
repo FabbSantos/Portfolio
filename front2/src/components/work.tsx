@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Logo from "./logo";
 import Typewriter from 'typewriter-effect';
 import Portfolio from "./portfolio/portfolio";
@@ -12,7 +12,7 @@ function scroll() {
 
 const Work: React.FC = () => {
 
-  const variants = {
+  const variants: Variants = {
     open: { width: "90vw", opacity: 1, height: "18vh", visibility: "visible", color: "white" },
     closed: { width: 0 }
   };

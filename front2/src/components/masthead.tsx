@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleRight, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Logo from "./logo";
@@ -14,7 +14,7 @@ import { Outlet, Link } from "react-router-dom";
 
 const Masthead: React.FC = () => {
 
-  const variants = {
+  const variants: Variants = {
     open: { width: "90vw", opacity: 1, height: "18vh", visibility: "visible", color: "white" },
     closed: { width: 0 }
   };

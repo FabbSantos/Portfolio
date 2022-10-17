@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import Logo from "./logo";
 import Typewriter from 'typewriter-effect';
-import About__Me from "./about_me";
+import Portfolio from "./portfolio/portfolio";
 import { Link } from "react-router-dom";
 
 function scroll() {
-    const about: HTMLElement = document.getElementById("desc")!;
+    const about = document.getElementById("portfolio") as HTMLElement;
     about.scrollIntoView({ block: "start", behavior: "smooth" });
 }
 
@@ -18,40 +18,40 @@ const About: React.FC = () => {
     };
 
     const [current, setCurrent] = useState<number | null>(null);
-    const [change, setChange] = useState(true);
 
-    return (  
+    return (
+        <>
             <section
-                id="work"
+                id="about"
                 className=" text-black text-center text-3xl  min-h-[95vh] mb-2"
             >
                 <div className="border-2 border-black m-5">
                     <Logo />
-                    <div className="px-6 md:px-0  md:max-w-[1400px] flex flex-row justify-center items-center  mt-auto mx-auto">
+                    <div className="px-6 md:px-0  md:max-w-[1400px] flex flex-col justify-center items-center min-h-[94vh] mt-auto mx-auto">
 
-                        <motion.h1
-                            className="max-w-3xl md:text-5xl mb-8  "
+                        <motion.div className="uppercase text-base max-w-[400px] min-w-[200px] text-black absolute top-[21%] right-[10%]">
+                            <Typewriter
+                                onInit={(typewritter) => {
+                                    typewritter.changeDelay(10)
+                                    typewritter.typeString("So, I understand. You want to know about me. That's awkward. ")
+                                        .start();
+                                }}
+                            />
+                        </motion.div>
+
+
+
+                        <motion.h2
+                            className="max-w-3xl md:text-5xl mb-8  absolute left-1/3 md:left-[15%] top-[15%]"
                             initial={{ x: "-20vw", opacity: 0 }}
                             animate={{ x: "-5vw", opacity: 1 }}
                             transition={{ type: "spring", duration: 1, bounce: 0.2 }}
                         >
                             <span className="f font-bold text-[8rem]  font-serif">About</span>
-                        </motion.h1>
-                        <motion.div className="uppercase text-base max-w-[400px] min-w-[200px] text-black  top-[21%] right-[10%]">
-                            <Typewriter
-                                onInit={(typewritter) => {
-                                    typewritter.changeDelay(10)
-                                    typewritter.typeString("I see... You're interested in me. wow, that's a little awkward. ")
-                                        .start();
-                                }}
-                            />
-                        </motion.div>
-                    </div>
+                        </motion.h2>
 
-
-
-                        <div className="menu-wrapper min-h-[50vh]">
-                            <motion.ul className="menu"
+                        <div className="menu-wrapper">
+                            <motion.ul className="menu inline"
                             >
                                 <li
                                     className="menu_item"
@@ -73,7 +73,7 @@ const About: React.FC = () => {
                                         variants={variants}
                                     >
                                         <span className="num z-20">01</span>
-                                        <span className="name z-20"><Link to="/work">work</Link></span>
+                                        <span className="name z-20"> <Link to="/work">work</Link></span>
                                     </motion.div>
                                 </li>
 
@@ -96,7 +96,7 @@ const About: React.FC = () => {
                                         variants={variants}
                                     >
                                         <span className="num z-20">02</span>
-                                        <span className="name z-20">about</span>
+                                        <span className="name z-20"><Link to="/about">about</Link></span>
                                     </motion.div>
                                 </li>
 
@@ -146,46 +146,49 @@ const About: React.FC = () => {
                                     </motion.div>
                                 </li>
                             </motion.ul>
+                        </div>
 
+                        <div className="bottom-row absolute bottom-[15%]">
+
+                            <div className="uppercase text-base max-w-[250px] min-w-[200px] text-black">
+                                <Typewriter
+                                    onInit={(typewritter) => {
+                                        typewritter.changeDelay(10)
+                                        typewritter.typeString("Let me take you into a story... ")
+                                            .start();
+                                    }}
+                                />
+                            </div>
+
+                            <div className="flex flex-row justify-evenly">
+                                <Link to="/">
+                                    <motion.button className="goto relative flex flex-row border-2 border-black px-10 py-4"
+                                        initial = {{ opacity: 0 }}
+                                        animate = {{ opacity: 1 }}
+                                        transition = {{ delay: 2 }}
+                                    >
+                                        take me
+                                    </motion.button>
+                                </Link>
+                            </div>
+
+                            <motion.h2
+                                className="max-w-3xl md:text-5xl   "
+                                initial={{ x: "+40vw", opacity: 0 }}
+                                animate={{ x: "0vw", opacity: 1 }}
+                                transition={{ type: "spring", duration: 1, bounce: 0.2 }}
+                            >
+
+                                <span className="font-bold text-[8rem]  font-serif">Me</span>
+                            </motion.h2>
 
 
                         </div>
-                            <div className="bottom-row  ">
-
-                                <div className="uppercase text-base max-w-[250px] min-w-[200px] text-black">
-                                    <Typewriter
-                                        onInit={(typewritter) => {
-                                            typewritter.changeDelay(10)
-                                            typewritter.typeString("Here you'll know about me, what I do, where did I came from... You know")
-                                                .start();
-                                        }}
-                                    />
-                                </div>
-
-
-                            <div>
-                                <p>Let me take you into a story</p>
-                            </div>
-
-
-                                <motion.h2
-                                    className="max-w-3xl md:text-5xl   "
-                                    initial={{ x: "+40vw", opacity: 0 }}
-                                    animate={{ x: "0vw", opacity: 1 }}
-                                    transition={{ type: "spring", duration: 1, bounce: 0.2 }}
-                                >
-
-                                    <span className="font-bold text-[8rem]  font-serif">Me</span>
-                                </motion.h2>
-
-                            </div>
-                    
+                    </div>
                 </div>
-            </section> 
-        
+            </section>
+        </>
     );
 };
 
 export default About;
-
-
